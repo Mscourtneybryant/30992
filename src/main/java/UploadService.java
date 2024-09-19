@@ -32,11 +32,11 @@ public class UploadService {
             // Creating instance
             StandardProtectionPolicy stop = new StandardProtectionPolicy("test", "test", ap);
             // Setting the length of Encryption key
-            stpp.setEncryptionKeyLength(128);
+            stop.setEncryptionKeyLength(128);
             // Setting the permission
-            stpp.setPermissions(ap);
+            stop.setPermissions(ap);
             // Protecting the PDF file
-            pdDocument.protect(stpp);
+            pdDocument.protect(stop);
             // Saving and closing  the PDF Document
             pdDocument.save(fullPath + "/" + fileName);
             pdDocument.close();
